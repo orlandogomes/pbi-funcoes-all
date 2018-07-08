@@ -1,0 +1,13 @@
+Total de Produtos = COUNT(Produtos[ID])
+
+Total de Produtos ALL = CALCULATE([Total de Produtos]; ALL(Produtos[Cor]))
+Produtos ALL % = DIVIDE([Total de Produtos];[Total de Produtos ALL];0)
+
+
+Total de Produtos ALLSELECTED = CALCULATE([Total de Produtos]; ALLSELECTED(Produtos[Cor]))
+Produtos ALLSELECTED % = DIVIDE([Total de Produtos];[Total de Produtos ALLSELECTED];0)
+
+
+Total de Produtos ALLEXCEPT = CALCULATE([Total de Produtos];ALLEXCEPT(Produtos;Produtos[ID]))
+Produtos ALLEXCEPT % = DIVIDE([Total de Produtos];[Total de Produtos ALLEXCEPT];0)
+
